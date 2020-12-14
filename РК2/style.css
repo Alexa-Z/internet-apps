@@ -1,0 +1,30 @@
+body{
+margin: 0px;
+font-family:Calibri, Helvetica, sans-serif;}
+
+.header{
+color:#4B0082;
+background-color:#00FFFF;
+display:flex;
+justify-content:center;
+text-align:center;
+font-size:30px;}
+
+.main-content{
+display:flex;
+flex-direction:column;
+align-items:center;}
+
+.line-header{
+background-color:#00FFFF;
+border-collapse:collapse;}
+
+.label{
+font-size:20px;
+font-weight:bold;}
+
+.line-a{
+	background-color: rgb(250,250,250);}
+	
+.line-b{
+	background-color: rgb(231,231,231);}
