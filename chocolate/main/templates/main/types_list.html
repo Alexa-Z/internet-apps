@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Связь многие-ко-многим
+{% endblock %}
+
+{% block content %}
+<h1><font color="#FFFF00" size="30">Фабрики производства</font></h1>
+{% for types in types_list %}
+<ul class="list-group">
+    <li class="list-group-item">
+        <h3>{{ types.title }}</h3>
+        <table>
+            <tr><th>Фабрики</th><th>Расположение</th></tr>
+                {% for factory in types.factory.all %}
+                <tr><td>{{ factory.name }}</td><td>{{ factory.place }}</td></tr>
+                {% endfor %}
+        </table>
+    </li>
+</ul>
+{% endfor %}
+{% endblock %}

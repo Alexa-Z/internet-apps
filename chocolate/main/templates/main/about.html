@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1><font color="#FFF5EE">Виды шоколада</font></h1>
+    {% if types %}
+        {% for el in types %}
+        <div class="alert alert-warning mt-2">
+           <h3>{{ el.title }}</h3>
+            <p>{{ el.task }}</p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>База данных пуста</p>
+    {% endif %}
+
+<nav class="my-2 my-md-0 mr-md-3">
+        <a href="{% url 'black' %}"><font color="#FFF5EE">Чёрный...</font></a>
+        <a href="{% url 'milk' %}"><font color="#FFF5EE">Молочный ...</font></a>
+          <a  href="{% url 'white' %}"><font color="#FFF5EE">Белый ...</font></a>
+</nav>
+{% endblock %}
